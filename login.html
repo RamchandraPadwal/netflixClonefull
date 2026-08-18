@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — Netflix Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body class="login-body">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="login-header">
+    <a href="index.html" class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo" class="logo__img" />
+    </a>
+  </header>
+
+  <!-- ===================== LOGIN SECTION ===================== -->
+  <main class="login">
+    <div class="login__bg">
+      <img src="bg.png" alt="Featured show background" class="login__img" />
+      <div class="login__vignette"></div>
+    </div>
+
+    <div class="login__card">
+      <h1 class="login__heading">Sign In</h1>
+
+      <p id="formError" class="login__error" hidden></p>
+
+      <form class="login__form" id="loginForm" novalidate>
+        <div class="field">
+          <input type="email" id="email" class="field__input" placeholder=" " autocomplete="username" required />
+          <label for="email" class="field__label">Email or phone number</label>
+        </div>
+
+        <div class="field">
+          <input type="password" id="password" class="field__input" placeholder=" " autocomplete="current-password" required minlength="4" />
+          <label for="password" class="field__label">Password</label>
+          <button type="button" id="togglePassword" class="field__toggle">Show</button>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg login__submit">Sign In</button>
+
+        <p class="login__or">OR</p>
+
+        <button type="button" class="btn btn--secondary btn--lg login__code">Use a sign-in code</button>
+
+        <a href="forgot-password.html" class="login__forgot">Forgot password?</a>
+
+        <label class="login__remember">
+          <input type="checkbox" id="rememberMe" class="login__checkbox" />
+          Remember me
+        </label>
+      </form>
+
+      <p class="login__signup">
+        New to Netflix? <a href="signup.html" class="login__signup-link">Sign up now</a>.
+      </p>
+
+      <p class="login__captcha">
+        This page is protected by Google reCAPTCHA to ensure you're not a bot.
+        <a href="#" class="login__captcha-link">Learn more.</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer login-footer">
+    <div class="footer__inner">
+      <p class="footer__contact">Questions? Call 1-844-505-2993</p>
+      <div class="footer__grid">
+        <a href="#" class="footer__link">FAQ</a>
+        <a href="#" class="footer__link">Investor Relations</a>
+        <a href="#" class="footer__link">Privacy</a>
+        <a href="#" class="footer__link">Speed Test</a>
+        <a href="#" class="footer__link">Help Center</a>
+        <a href="#" class="footer__link">Jobs</a>
+        <a href="#" class="footer__link">Cookie Preferences</a>
+        <a href="#" class="footer__link">Legal Notices</a>
+        <a href="#" class="footer__link">Account</a>
+        <a href="#" class="footer__link">Ways to Watch</a>
+        <a href="#" class="footer__link">Corporate Information</a>
+        <a href="#" class="footer__link">Only on Netflix</a>
+        <a href="#" class="footer__link">Media Center</a>
+        <a href="#" class="footer__link">Terms of Use</a>
+        <a href="#" class="footer__link">Contact Us</a>
+      </div>
+      <p class="footer__copy">This is a fan-made, non-commercial clone built for demonstration purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

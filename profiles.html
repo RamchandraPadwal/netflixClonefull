@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who's Watching? — Netflix Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profiles.css" />
+</head>
+<body>
+
+  <header class="mini-header">
+    <a href="index.html" class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo" class="logo__img" />
+    </a>
+  </header>
+
+  <main class="profiles">
+
+    <!-- ===== SELECT / MANAGE GRID ===== -->
+    <div class="profiles__grid-view" id="gridView">
+      <h1 class="profiles__heading" id="gridHeading">Who's watching?</h1>
+
+      <div class="profiles__grid" id="profilesGrid"></div>
+
+      <button class="btn btn--outline profiles__manage-btn" id="manageToggleBtn">Manage Profiles</button>
+    </div>
+
+    <!-- ===== ADD / EDIT PROFILE FORM ===== -->
+    <div class="profiles__edit-view" id="editView" hidden>
+      <h1 class="profiles__heading" id="editHeading">Edit Profile</h1>
+
+      <div class="edit-card">
+        <div class="edit-card__avatar-wrap">
+          <button class="edit-card__avatar" id="editAvatarPreview" type="button" aria-label="Choose avatar">
+            <span id="editAvatarInitial"></span>
+          </button>
+          <p class="edit-card__avatar-hint">Click to change avatar</p>
+        </div>
+
+        <div class="edit-card__fields">
+          <label class="edit-card__label" for="profileName">Name</label>
+          <input type="text" id="profileName" class="edit-card__input" maxlength="20" placeholder="Profile name" />
+
+          <label class="edit-card__checkbox">
+            <input type="checkbox" id="profileKids" />
+            <span>
+              <strong>Kids profile</strong>
+              <small>Only shows TV shows and movies rated for young audiences.</small>
+            </span>
+          </label>
+
+          <div class="edit-card__actions">
+            <button class="btn btn--primary" id="saveProfileBtn">Save</button>
+            <button class="btn btn--outline" id="cancelProfileBtn">Cancel</button>
+            <button class="btn btn--danger" id="deleteProfileBtn" hidden>Delete Profile</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avatar picker overlay -->
+      <div class="avatar-picker" id="avatarPicker" hidden>
+        <div class="avatar-picker__panel">
+          <p class="avatar-picker__title">Choose an avatar</p>
+          <div class="avatar-picker__grid" id="avatarPickerGrid"></div>
+          <button class="btn btn--outline avatar-picker__close" id="avatarPickerClose">Close</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="profiles.js"></script>
+</body>
+</html>

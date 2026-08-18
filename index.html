@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <div class="navbar__left">
+        <a href="index.html" class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo" class="logo__img" />
+        </a>
+      </div>
+      <div class="navbar__right">
+        <a href="login.html" class="btn btn--primary btn--sm">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="bg.png" alt="Featured show background" class="hero__img" />
+      <div class="hero__vignette"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Start streaming tonight</p>
+      <h1 class="hero__heading">Unlimited movies, TV shows, and more</h1>
+      <p class="hero__subheading">Watch anywhere. Cancel anytime.</p>
+      <p class="hero__desc">Ready to watch? Enter your email to create or restart your membership.</p>
+
+      <form class="hero__form" action="signup.html" method="get">
+        <input
+          type="email"
+          name="email"
+          class="hero__email"
+          placeholder="Email address"
+          aria-label="Email address"
+          required
+        />
+        <button type="submit" class="btn btn--primary btn--lg">
+          Get Started <span class="btn__chevron">›</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== TRENDING NOW ===================== -->
+  <section class="trending" id="trending">
+    <div class="trending__header">
+      <h2 class="section-title">Trending Now</h2>
+      <a href="login.html" class="trending__seeall">See all ›</a>
+    </div>
+
+    <div class="trending__row">
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Midnight Signal" />
+          <span class="trend-movie__badge">Top 10</span>
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Midnight Signal</h3>
+        <p class="trend-movie__meta">2024 · Sci-Fi Thriller</p>
+      </article>
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Ashen Coast" />
+          <span class="trend-movie__badge">Top 10</span>
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Ashen Coast</h3>
+        <p class="trend-movie__meta">2023 · Drama</p>
+      </article>
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Glass City" />
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Glass City</h3>
+        <p class="trend-movie__meta">2024 · Crime Series</p>
+      </article>
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Northbound" />
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Northbound</h3>
+        <p class="trend-movie__meta">2022 · Adventure</p>
+      </article>
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Salt & Static" />
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Salt &amp; Static</h3>
+        <p class="trend-movie__meta">2024 · Documentary</p>
+      </article>
+
+      <article class="trend-movie">
+        <div class="trend-movie__poster">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" alt="Movie trailer thumbnail: Paper Moons" />
+          <div class="trend-movie__overlay">
+            <button class="btn btn--play btn--sm">▶ Play</button>
+          </div>
+        </div>
+        <h3 class="trend-movie__title">Paper Moons</h3>
+        <p class="trend-movie__meta">2023 · Romance</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="features" id="features">
+    <div class="features__container">
+
+      <div class="feature">
+        <div class="feature__text">
+          <h2 class="feature__heading">Enjoy on your TV</h2>
+          <p class="feature__desc">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+        </div>
+        <div class="feature__media feature__media--tv">
+          <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=900&auto=format&fit=crop" alt="Television displaying streaming content" class="feature__img" />
+          <div class="feature__glow"></div>
+        </div>
+      </div>
+
+      <div class="feature feature--reverse">
+        <div class="feature__text">
+          <h2 class="feature__heading">Download shows to watch offline</h2>
+          <p class="feature__desc">Save your favorites easily and always have something to watch, even without a connection.</p>
+        </div>
+        <div class="feature__media feature__media--download">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=900&auto=format&fit=crop" alt="Phone screen with downloaded show" class="feature__img feature__img--phone" />
+          <div class="feature__card">
+            <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=200&auto=format&fit=crop" alt="Downloaded episode thumbnail" class="feature__card-thumb" />
+            <div class="feature__card-text">
+              <p class="feature__card-title">Midnight Signal</p>
+              <p class="feature__card-sub">Downloading…</p>
+            </div>
+            <div class="feature__card-spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature__text">
+          <h2 class="feature__heading">Watch everywhere</h2>
+          <p class="feature__desc">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+        </div>
+        <div class="feature__media feature__media--devices">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=900&auto=format&fit=crop" alt="Laptop showing streaming interface" class="feature__img" />
+        </div>
+      </div>
+
+      <div class="feature feature--reverse">
+        <div class="feature__text">
+          <h2 class="feature__heading">Create profiles for kids</h2>
+          <p class="feature__desc">Send children on adventures with their favorite characters in a space made just for them, free with your membership.</p>
+        </div>
+        <div class="feature__media feature__media--kids">
+          <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=900&auto=format&fit=crop" alt="Kids profile illustration" class="feature__img" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FAQ / CTA ===================== -->
+  <section class="cta">
+    <h2 class="cta__heading">Ready to watch? Enter your email to create or restart your membership.</h2>
+    <form class="hero__form cta__form" action="signup.html" method="get">
+      <input type="email" name="email" class="hero__email" placeholder="Email address" aria-label="Email address" required />
+      <button type="submit" class="btn btn--primary btn--lg">
+        Get Started <span class="btn__chevron">›</span>
+      </button>
+    </form>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__contact">Questions? Call 1-844-505-2993</p>
+      <div class="footer__grid">
+        <a href="#" class="footer__link">FAQ</a>
+        <a href="#" class="footer__link">Investor Relations</a>
+        <a href="#" class="footer__link">Privacy</a>
+        <a href="#" class="footer__link">Speed Test</a>
+        <a href="#" class="footer__link">Help Center</a>
+        <a href="#" class="footer__link">Jobs</a>
+        <a href="#" class="footer__link">Cookie Preferences</a>
+        <a href="#" class="footer__link">Legal Notices</a>
+        <a href="login.html" class="footer__link">Account</a>
+        <a href="#" class="footer__link">Ways to Watch</a>
+        <a href="#" class="footer__link">Corporate Information</a>
+        <a href="#" class="footer__link">Only on Netflix</a>
+        <a href="#" class="footer__link">Media Center</a>
+        <a href="#" class="footer__link">Terms of Use</a>
+        <a href="#" class="footer__link">Contact Us</a>
+      </div>
+      <p class="footer__copy">This is a fan-made, non-commercial clone built for demonstration purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

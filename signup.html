@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — Netflix Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body class="login-body">
+
+  <header class="login-header">
+    <a href="index.html" class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo" class="logo__img" />
+    </a>
+  </header>
+
+  <main class="login">
+    <div class="login__bg">
+      <img src="bg.png" alt="Featured show background" class="login__img" />
+      <div class="login__vignette"></div>
+    </div>
+
+    <div class="login__card signup__card">
+      <h1 class="login__heading">Create Account</h1>
+      <p class="login__hint">Step 1 of 1 — just the basics. You'll pick profiles and start watching right after.</p>
+
+      <p id="formError" class="login__error" hidden></p>
+
+      <form class="login__form" id="signupForm" novalidate>
+        <div class="field">
+          <input type="text" id="fullName" class="field__input" placeholder=" " autocomplete="name" required />
+          <label for="fullName" class="field__label">Full name</label>
+        </div>
+
+        <div class="field">
+          <input type="email" id="signupEmail" class="field__input" placeholder=" " autocomplete="username" required />
+          <label for="signupEmail" class="field__label">Email address</label>
+        </div>
+
+        <div class="field">
+          <input type="password" id="signupPassword" class="field__input" placeholder=" " autocomplete="new-password" required minlength="4" />
+          <label for="signupPassword" class="field__label">Password</label>
+          <button type="button" id="togglePassword" class="field__toggle">Show</button>
+        </div>
+
+        <div class="field">
+          <input type="password" id="signupConfirm" class="field__input" placeholder=" " autocomplete="new-password" required minlength="4" />
+          <label for="signupConfirm" class="field__label">Confirm password</label>
+        </div>
+
+        <label class="login__remember signup__terms">
+          <input type="checkbox" id="agreeTerms" required />
+          I agree to the Terms of Use and Privacy Statement.
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--lg login__submit">Create Account</button>
+      </form>
+
+      <p class="login__signup">
+        Already have an account? <a href="login.html" class="login__signup-link">Sign in</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer login-footer">
+    <div class="footer__inner">
+      <p class="footer__contact">Questions? Call 1-844-505-2993</p>
+      <div class="footer__grid">
+        <a href="#" class="footer__link">FAQ</a>
+        <a href="#" class="footer__link">Help Center</a>
+        <a href="#" class="footer__link">Terms of Use</a>
+        <a href="#" class="footer__link">Privacy</a>
+      </div>
+      <p class="footer__copy">This is a fan-made, non-commercial clone built for demonstration purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* =========================================================
+   NETFLIX CLONE — signup.css
+   (shares the same visual language as login.css)
+========================================================= */
+
+:root {
+  --bg: #0b0b0b;
+  --bg-elevated: #141414;
+  --card: #1f1f1f;
+  --red: #e50914;
+  --red-hover: #f6121d;
+  --white: #f5f5f1;
+  --muted: #b3b3b3;
+  --muted-dim: #737373;
+  --border: rgba(255, 255, 255, 0.1);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.15s var(--ease), transform 0.15s var(--ease), opacity 0.15s var(--ease);
+}
+
+.btn--primary { background: var(--red); color: #fff; }
+.btn--primary:hover { background: var(--red-hover); }
+.btn--primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn--secondary { background: rgba(109, 109, 110, 0.7); color: var(--white); }
+.btn--secondary:hover { background: rgba(109, 109, 110, 0.5); }
+
+.btn--lg { padding: 16px 24px; font-size: 1.15rem; width: 100%; }
+
+.logo__img { height: 26px; width: auto; }
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.login-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 24px 48px;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-body { min-height: 100vh; }
+
+.login {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px;
+}
+
+.login__bg { position: absolute; inset: 0; z-index: -2; }
+
+.login__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.6);
+}
+
+.login__vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, var(--bg) 100%);
+}
+
+.login__card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 60px 68px 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.signup__card { max-width: 480px; }
+
+.login__heading { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+
+.login__hint { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+
+.signup__terms { font-size: 0.8rem; line-height: 1.4; align-items: flex-start; }
+.signup__terms input { margin-top: 2px; }
+
+.login__error {
+  background: #e87c03;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.login__form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { position: relative; }
+
+.field__input {
+  width: 100%;
+  padding: 20px 18px 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--white);
+  background: #333;
+  border: 1px solid #555;
+  border-radius: var(--radius-sm);
+}
+
+.field__input:focus { background: #454545; border-color: var(--white); outline: none; }
+
+.field__input.field--invalid { border-color: #e87c03; }
+
+.field__label {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  color: var(--muted);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: top 0.15s var(--ease), font-size 0.15s var(--ease), color 0.15s var(--ease);
+}
+
+.field__input:focus + .field__label,
+.field__input:not(:placeholder-shown) + .field__label {
+  top: 7px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.field__toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.field__toggle:hover { color: var(--white); }
+
+.login__or { text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+.login__forgot { align-self: flex-start; font-size: 0.85rem; color: var(--muted); }
+.login__forgot:hover { text-decoration: underline; color: var(--white); }
+
+.login__remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.login__checkbox { width: 16px; height: 16px; accent-color: var(--muted); cursor: pointer; }
+
+.login__signup { margin-top: 18px; color: var(--muted); font-size: 0.95rem; }
+.login__signup-link { color: var(--white); font-weight: 600; }
+.login__signup-link:hover { text-decoration: underline; }
+
+.login__captcha { margin-top: 14px; font-size: 0.75rem; line-height: 1.4; color: var(--muted-dim); }
+.login__captcha-link { color: #0071eb; }
+.login__captcha-link:hover { text-decoration: underline; }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer { background: transparent; padding: 64px 48px 40px; position: relative; }
+.footer__inner { max-width: 1000px; margin: 0 auto; }
+.footer__contact { color: var(--muted); font-size: 0.95rem; margin-bottom: 24px; }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin-bottom: 32px;
+}
+
+.footer__link { font-size: 0.82rem; color: var(--muted-dim); }
+.footer__link:hover { text-decoration: underline; color: var(--muted); }
+.footer__copy { font-size: 0.78rem; color: var(--muted-dim); }
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+  .login-header { padding: 18px 20px; }
+  .login__card { padding: 40px 24px 30px; border-radius: 0; }
+  .login { padding: 100px 0 60px; }
+  .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer { padding: 48px 20px 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

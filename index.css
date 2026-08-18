@@ -255,22 +255,42 @@ a {
   margin-bottom: 20px;
 }
 
+/* Stack form elements vertically on mobile and clear default flex stretch */
 .hero__form {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
 }
 
-.hero__email {
-  flex: 1 1 320px;
-  min-width: 240px;
-  padding: 16px 18px;
-  font-size: 1rem;
+/* Force the wrapper AND input to stay short */
+.hero__form > * {
+  width: 100% !important;
+  max-width: 450px !important;
+  height: 56px !important;
+  max-height: 56px !important;
+  min-height: 56px !important;
+}
+
+/* Target the input/textarea directly to reset height and align placeholder text */
+.hero__email, 
+.hero__form input, 
+.hero__form textarea {
+  width: 100% !important;
+  height: 56px !important;
+  min-height: 56px !important;
+  max-height: 56px !important;
+  padding: 0 16px !important;
+  font-size: 1.125rem !important;
+  font-weight: 400;
   font-family: inherit;
-  color: var(--white);
+  box-sizing: border-box !important;
+  line-height: 56px !important;
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-sm);
+  resize: none; /* Prevents textareas from expanding */
 }
 
 .hero__email::placeholder {
